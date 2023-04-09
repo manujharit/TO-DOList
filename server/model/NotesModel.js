@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config({ path: '../.env' })
 
-mongoose.connect('mongodb://127.0.0.1:27017/Todo', {
+mongoose.connect(process.env['mongoDbEndpoint'], {
   useNewUrlParser: true,
   // useCreateIndex: true,
   // useFindAndModify: false,
